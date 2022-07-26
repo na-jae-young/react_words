@@ -15,3 +15,16 @@ export default function Word({word}:any){
        </>
        )
 }
+
+/*
+npm install -g json-server
+json-server --watch ./src/db/data.json  --port 3001
+
+
+REST API 
+
+Create : POST
+Read : GET
+Update : PUT
+Delete : DELETE
+*/
