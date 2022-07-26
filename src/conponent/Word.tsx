@@ -27,4 +27,6 @@ Create : POST
 Read : GET
 Update : PUT
 Delete : DELETE
+
+/days?id=3
 */
