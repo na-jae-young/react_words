@@ -1,16 +1,21 @@
 import  { Link } from 'react-router-dom'
-import dummy from '../db/data.json'
-import Day from '../conponent/Day';
-import { JSXElementConstructor, Key, ReactElement, ReactFragment, ReactPortal, useEffect, useState } from 'react'
-import useFetch from '../hooks/useFetch';
-export default function DayList(){
+//import dummy from '../db/data.json'
 
-    type DAY=
-        {
-            id: number;
-            day: number;
-        }
-    const days :DAY[] = useFetch(`http://localhost:3001/days`)
+
+import useFetch from '../hooks/useFetch';
+
+export  interface DAY{
+    id:number;
+    day:number;
+}
+
+
+export default function DayList(){
+    const days : DAY[] = useFetch(`http://localhost:3001/days`)
+
+    if(days.length === 0 ){
+        return(<span>Loading....</span>)
+    }
 
     return(
         <div>
@@ -22,3 +27,4 @@ export default function DayList(){
         </div>
     )
 }
+

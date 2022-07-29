@@ -1,6 +1,6 @@
-import React from 'react'
+
 import {Link} from 'react-router-dom'
-import DayList from './DayList'
+
 
 
 export function Header(){
@@ -10,8 +10,8 @@ export function Header(){
                 <Link to={'/'}>Words</Link>
             </h1>
             <div className='menu'>
-                <Link to={'#x'} className='link'>WORD ADD</Link>
-                <Link to={'#y'} className ='link'>DAY ADD</Link>
+                <Link to={'/create_word'} className='link'>WORD ADD</Link>
+                <Link to={'create_day'} className ='link'>DAY ADD</Link>
             </div>
 
         </div>
